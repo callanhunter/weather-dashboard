@@ -1,3 +1,5 @@
+
+
 h1 {
     display: flex;
     justify-content: center;
@@ -14,9 +16,17 @@ p {
     margin-left: 15px;
 }
 
+ul {
+    list-style-type: none;
+}
+
 #today-weather {
     list-style-type: none;
     display: flex;
     justify-content: right;
     flex-direction: column;
+}
+
+.search-button {
+    
 }

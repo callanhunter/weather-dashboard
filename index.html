@@ -13,23 +13,26 @@
         <h1>Weather Dashboard</h1>
     </head>
     <main>
-        <div id="weather-input">
-            <ul id="today-weather"></ul>
-            <ul id="day1"></ul>
-            <ul id="day2"></ul>
-            <ul id="day3"></ul>
-            <ul id="day4"></ul>
-            <ul id="day5"></ul>
-        </div>
         <div class="container">
             <div class="search-button">
                 <p>Search for a city:</p>
                 <input for="text" id="input">
                 <button id="button">Search</button>
+                <ul></ul>
             </div>
-            <ul></ul>
+            <div id="weather-input">
+                <p id="4a" class="answer"></p>
+                <ul id="today-weather"></ul>
+                <ul id="day1"></ul>
+                <ul id="day2"></ul>
+                <ul id="day3"></ul>
+                <ul id="day4"></ul>
+                <ul id="day5"></ul>
+            </div>
+    
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
     <script src="assets/js/script.js"></script>
 </body>
