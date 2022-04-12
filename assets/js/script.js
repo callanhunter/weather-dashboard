@@ -26,11 +26,11 @@ function clickEventHandeler(){
     fetch(url).then(function(response){
         return response.json()
     }).then(function(data){
-        weather(data[0].lat, data[0].lon)
+        weatherForcast(data[0].lat, data[0].lon)
     })
 }
 
-function weather(lat, lon) {
+function weatherForcast(lat, lon) {
     var url = 'https://api.openweathermap.org/data/2.5/onecall?units=imperial&lat='+lat+'&lon='+lon+'&appid=' + apiKey
     fetch(url).then(function(response){
         return response.json()
@@ -48,15 +48,15 @@ function weather(lat, lon) {
         
         // current day
         var liTemp = $('<li>')
-        liTemp.text('temp: '+data.current.temp)
+        liTemp.text('temp: '+data.current.temp + "℉")
         currentDayEl.append(liTemp)
 
         var liHumidity = $('<li>')
-        liHumidity.text('humidity: '+ data.current.humidity)
+        liHumidity.text('humidity: '+ data.current.humidity + "%")
         currentDayEl.append(liHumidity)
 
         var liWindSpeed = $('<li>')
-        liWindSpeed.text('wind_speed: '+ data.current.wind_speed)
+        liWindSpeed.text('wind_speed: '+ data.current.wind_speed + " MPH")
         currentDayEl.append(liWindSpeed)
 
         var liUvIndex = $('<li>')
@@ -66,56 +66,56 @@ function weather(lat, lon) {
 
         // day 1
         var liTemp1 = $('<li>')
-        liTemp1.text('temp: '+ data.daily[1].temp.day)
+        liTemp1.text('temp: '+ data.daily[1].temp.day + "℉" + data.daily[1].weather[0].icon)
         console.log(data.daily[1].temp.day)
         day1El.append(liTemp1)
 
         var liHumidity1 = $('<li>')
-        liHumidity1.text('humidity: '+ data.daily[1].humidity)
+        liHumidity1.text('humidity: '+ data.daily[1].humidity + "%")
         day1El.append(liHumidity1)
 
 
         
         //day 2
         var liTemp2 = $('<li>')
-        liTemp2.text('temp: '+ data.daily[2].temp.day)
+        liTemp2.text('temp: '+ data.daily[2].temp.day + "℉" + data.daily[2].weather[0].icon)
         day2El.append(liTemp2)
 
         var liHumidity2 = $('<li>')
-        liHumidity2.text('humidity: '+ data.daily[2].humidity)
+        liHumidity2.text('humidity: '+ data.daily[2].humidity + "%")
         day2El.append(liHumidity2)
 
 
 
         //day 3
         var liTemp3 = $('<li>')
-        liTemp3.text('temp: '+ data.daily[3].temp.day)
+        liTemp3.text('temp: '+ data.daily[3].temp.day + "℉" + data.daily[3].weather[0].icon)
         day3El.append(liTemp3)
 
         var liHumidity3 = $('<li>')
-        liHumidity3.text('humidity: '+ data.daily[3].humidity)
+        liHumidity3.text('humidity: '+ data.daily[3].humidity + "%")
         day3El.append(liHumidity3)
 
 
 
         //day 4
         var liTemp4 = $('<li>')
-        liTemp4.text('temp: '+ data.daily[4].temp.day)
+        liTemp4.text('temp: '+ data.daily[4].temp.day + "℉" + data.daily[4].weather[0].icon)
         day4El.append(liTemp4)
 
         var liHumidity4 = $('<li>')
-        liHumidity4.text('humidity: '+ data.daily[4].humidity)
+        liHumidity4.text('humidity: '+ data.daily[4].humidity + "%")
         day4El.append(liHumidity4)
 
 
 
         //day 5
         var liTemp5 = $('<li>')
-        liTemp5.text('temp: '+ data.daily[5].temp.day)
+        liTemp5.text('temp: '+ data.daily[5].temp.day + "℉" + data.daily[5].weather[0].icon)
         day5El.append(liTemp5)
 
         var liHumidity5 = $('<li>')
-        liHumidity5.text('humidity: '+ data.daily[5].humidity)
+        liHumidity5.text('humidity: '+ data.daily[5].humidity + "%")
         day5El.append(liHumidity5)
 
     })
