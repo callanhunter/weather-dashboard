@@ -13,3 +13,10 @@ p {
 #item {
     margin-left: 15px;
 }
+
+#today-weather {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+}
