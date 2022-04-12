@@ -66,7 +66,8 @@ function weather(lat, lon) {
 
         // day 1
         var liTemp1 = $('<li>')
-        liTemp1.text('temp: '+ data.daily.temp)
+        liTemp1.text('temp: '+ data.daily[1].temp.day)
+        console.log(data.daily[1].temp.day)
         day1El.append(liTemp1)
 
         var liHumidity1 = $('<li>')
@@ -77,7 +78,7 @@ function weather(lat, lon) {
         
         //day 2
         var liTemp2 = $('<li>')
-        liTemp2.text('temp: '+ data.daily.temp)
+        liTemp2.text('temp: '+ data.daily[2].temp.day)
         day2El.append(liTemp2)
 
         var liHumidity2 = $('<li>')
@@ -88,7 +89,7 @@ function weather(lat, lon) {
 
         //day 3
         var liTemp3 = $('<li>')
-        liTemp3.text('temp: '+ data.daily.temp)
+        liTemp3.text('temp: '+ data.daily[3].temp.day)
         day3El.append(liTemp3)
 
         var liHumidity3 = $('<li>')
@@ -99,7 +100,7 @@ function weather(lat, lon) {
 
         //day 4
         var liTemp4 = $('<li>')
-        liTemp4.text('temp: '+ data.daily.temp)
+        liTemp4.text('temp: '+ data.daily[4].temp.day)
         day4El.append(liTemp4)
 
         var liHumidity4 = $('<li>')
@@ -107,9 +108,10 @@ function weather(lat, lon) {
         day4El.append(liHumidity4)
 
 
+
         //day 5
         var liTemp5 = $('<li>')
-        liTemp5.text('temp: '+ data.daily.temp)
+        liTemp5.text('temp: '+ data.daily[5].temp.day)
         day5El.append(liTemp5)
 
         var liHumidity5 = $('<li>')
