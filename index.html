@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
@@ -18,11 +17,20 @@
             <div class="search-button">
                 <p>Search for a city:</p>
                 <input for="text" id="input">
-                <button onclick="add()">Search</button>
+                <button id="button">Search</button>
             </div>
             <ul></ul>
         </div>
+        <div id="weather-input">
+            <ul id="today-weather"></ul>
+            <ul id="day1"></ul>
+            <ul id="day2"></ul>
+            <ul id="day3"></ul>
+            <ul id="day4"></ul>
+            <ul id="day5"></ul>
+        </div>
     </main>
-    <script src="/assets/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
